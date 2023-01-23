@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gatekee/projects/projectsApi/TouristApi/TouristApi.csproj": {}
+    "F:\\apis\\exit-travil-Api\\TouristApi.csproj": {}
   },
   "projects": {
-    "/Users/gatekee/projects/projectsApi/TouristApi/TouristApi.csproj": {
+    "F:\\apis\\exit-travil-Api\\TouristApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gatekee/projects/projectsApi/TouristApi/TouristApi.csproj",
+        "projectUniqueName": "F:\\apis\\exit-travil-Api\\TouristApi.csproj",
         "projectName": "TouristApi",
-        "projectPath": "/Users/gatekee/projects/projectsApi/TouristApi/TouristApi.csproj",
-        "packagesPath": "/Users/gatekee/.nuget/packages/",
-        "outputPath": "/Users/gatekee/projects/projectsApi/TouristApi/obj/",
+        "projectPath": "F:\\apis\\exit-travil-Api\\TouristApi.csproj",
+        "packagesPath": "C:\\Users\\obama\\.nuget\\packages\\",
+        "outputPath": "F:\\apis\\exit-travil-Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gatekee/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\obama\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -120,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

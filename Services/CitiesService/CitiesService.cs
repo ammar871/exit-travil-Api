@@ -90,31 +90,47 @@ namespace TouristApi.Services
             return City!;
         }
 
-        public async Task<dynamic> GitCitiesByCountryId(int typeId, int page)
+        public async Task<dynamic> GitCitiesByCountryId(int typeId)
         {
-            List<City> Cities = await _context.Cities!.Where(t => t.CountryId == typeId).ToListAsync();
 
-            Country? country=await _context.Countries!.FirstOrDefaultAsync(t=>t.Id==typeId);
+             List<City> cities =new List<City>();
+             Country? country;
+            if(typeId ==0){
+                 country=await _context.Countries!.FirstAsync();   
+                
+             cities   = await _context.Cities!.Where(t => t.CountryId == country.Id).ToListAsync();
+                
+                         }else
+                         {
+                        cities    = await _context.Cities!.Where(t => t.CountryId == typeId).ToListAsync();
 
-            var pageResults = 30f;
-            var pageCount = Math.Ceiling(Cities.Count() / pageResults);
+            country=await _context.Countries!.FirstOrDefaultAsync(t=>t.Id==typeId); 
+                         }
+           
 
-            var items = await Cities
-                .Skip((page - 1) * (int)pageResults)
-                .Take((int)pageResults)
-                .ToListAsync();
+            // var pageResults = 30f;
+            // var pageCount = Math.Ceiling(Cities.Count() / pageResults);
+
+            // var items = await Cities
+            //     .Skip((page - 1) * (int)pageResults)
+            //     .Take((int)pageResults)
+            //     .ToListAsync();
 
 
 
-            BaseResponse baseResponse = new BaseResponse
-            {
+            // BaseResponse baseResponse = new BaseResponse
+            // {
                   
-                Items = items,
-                CurrentPage = page,
-                TotalPages = (int)pageCount
+            //     Items = items,
+            //     CurrentPage = page,
+            //     TotalPages = (int)pageCount
+            // };
+            ResponseCity responseCity=new ResponseCity{
+Country=country,
+Cities=cities
             };
 
-            return baseResponse;
+            return responseCity;
         }
 
 

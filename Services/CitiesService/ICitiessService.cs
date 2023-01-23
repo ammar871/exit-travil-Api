@@ -8,7 +8,7 @@ namespace TouristApi.Services
 {
     public interface ICitiesService :BaseInterface
     {
-          Task<dynamic> GitCitiesByCountryId(int typeId,int page);
+          Task<dynamic> GitCitiesByCountryId(int typeId);
 
            Task<dynamic> GitCitiesByCountryIdAdmin(int typeId);
            Task<dynamic> GetAllItems();

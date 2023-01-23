@@ -70,10 +70,10 @@ namespace TouristApi.Controllers
 
           [HttpGet] 
         [Route("git-cities-byCountryId")]
-        public async Task<ActionResult> GitCitiesByCountryId([FromQuery] int countryId,[FromQuery] int page)
+        public async Task<ActionResult> GitCitiesByCountryId([FromQuery] int countryId)
         {
 
-            return Ok(await _repository.GitCitiesByCountryId(countryId,page));
+            return Ok(await _repository.GitCitiesByCountryId(countryId));
         }
 
 
